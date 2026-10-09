@@ -645,7 +645,7 @@ function entryHTML(r){
   return `<div class="entry">${val}${tags.length ? `<div class="tags">${tags.join('')}</div>` : ''}<div class="txt${long ? ' clamp' : ''}">${hl(esc(r.t))}</div>${long ? '<button class="more" data-more>mehr anzeigen</button>' : ''}<div class="src">${srcHTML(r)}</div></div>`;
 }
 const badge = ds => `<span class="tag ${ds}" title="${ds==='S'?'Selektionsbausteine Schlussbericht':'Weitere erfasste Selektionsstrukturen / -mechanismen'}">${ds==='S'?'Schlussbericht':'Weitere'}</span>`;
-const fnSup = a => a.fn ? `<sup class="fn">${a.fn}</sup>` : '';
+const fnSup = a => '';
 function goKanton(kt, cat=''){ st.sel = [kt]; st.cat = cat; setView('kanton'); window.scrollTo({top:0}); }
 const cmpG = (a,b) => (a.g===GK ? -1 : b.g===GK ? 1 : de(a.g,b.g));
 
